@@ -1,0 +1,49 @@
+> create
+Створення нового акаунту користувача:
+    > username:
+        1) Ім'я користувача вже існує
+            - auth.UsernameAlreadyExists
+
+    > password
+        1) Довжина паролю менша 6
+            - auth.PasswordTooShort
+        2) Пароль не містить жодної цифри
+            - auth.PasswordWithoutNumbers
+        3) Пароль не містить і великих, і малих літер
+            - auth.PasswordWithoutBigSmallLetters
+
+> login
+Логування користувача
+    > username
+        1) Такого ім'я користувача не існує
+            - auth.InvalidUsername
+    > password
+        2) Пароль невірний
+            - auth.InvalidPassword
+
+
+Чи має користувач дозвіл?
+    1) Користувач не має дозволу
+        - auth.NotPermittedError
+    2) Користувач не ввійшов у свій акаунт
+        - auth.NotLoggedInError
+
+
+> set
+Користувач надає дозволи
+    > username
+        1) Такого користувача не існує
+            - auth.InvalidUsername
+    > permission
+        2) Такого довзолу не існує
+            - auth.InvalidPassword
+        3) Користувач вже має такий дозвіл
+            - auth.UserHasPermission
+
+Menu
+Користувач вводить команди
+    >
+        1) Такої команди не існує
+            - KeyError
+
+
